@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>오시는 길 · 문의 | 빠둠뮤직 보컬학원</title>
+<meta name="description" content="빠둠뮤직 오시는 길과 문의 — 부산 양정, 서울 충무로 스튜디오.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="container">
+    <a href="index.html" class="logo">빠둠<span>뮤직</span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">홈</a></li>
+      <li><a href="courses.html">커리큘럼</a></li>
+      <li><a href="instructors.html">강사진</a></li>
+      <li><a href="pricing.html">수강료</a></li>
+      <li><a href="reviews.html">후기</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html" aria-current="page">오시는 길</a></li>
+    </ul>
+    <a href="contact.html" class="btn nav-cta">체험 레슨 신청</a>
+    <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false" aria-controls="navLinks">☰</button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <div class="container">
+    <span class="eyebrow">Visit / Contact</span>
+    <h1>오시는 길 · 문의</h1>
+    <p>부산 양정, 서울 충무로 두 곳에서 만나요. 카카오톡이나 아래 문의 폼으로도 편하게 연락 주세요.</p>
+  </div>
+</header>
+
+<section>
+  <div class="container contact-grid">
+    <div>
+      <div class="location-card">
+        <span class="eyebrow">Busan</span>
+        <h3>부산 양정 스튜디오</h3>
+        <span class="addr">부산광역시 부산진구 중앙대로 918-1 3층</span>
+        <p>양정역 2번출구 도보 1분 · 보컬 · 음성재활 · 기타 스튜디오 상시 운영</p>
+        <a href="https://map.naver.com/p/entry/place/33860417" target="_blank" rel="noopener" class="btn btn--ghost map-link">네이버 지도에서 보기 ↗</a>
+      </div>
+      <div class="location-card">
+        <span class="eyebrow">Seoul</span>
+        <h3>서울 충무로 스튜디오</h3>
+        <span class="addr">서울특별시 중구 퇴계로37길 21-1 2층</span>
+        <p>충무로역 7번출구 인근 · 목·금요일 운영</p>
+        <a href="https://map.naver.com/p/search/%EC%84%9C%EC%9A%B8%20%EC%A4%91%EA%B5%AC%20%ED%87%B4%EA%B3%84%EB%A1%9C37%EA%B8%B8%2021-1" target="_blank" rel="noopener" class="btn btn--ghost map-link">네이버 지도에서 보기 ↗</a>
+      </div>
+      <a href="https://pf.kakao.com/_ACxjxmxj" target="_blank" rel="noopener" class="btn kakao-btn" style="margin-top: var(--space-3); width: 100%; justify-content: center;">카카오톡 채널로 상담하기</a>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+      <span class="eyebrow">Inquiry Form</span>
+      <h3>문의 남기기</h3>
+      <div class="form-row">
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-row">
+        <label for="phone">연락처</label>
+        <input type="tel" id="phone" name="phone" placeholder="010-0000-0000" required>
+      </div>
+      <div class="form-row">
+        <label for="interest">관심 분야</label>
+        <select id="interest" name="관심 분야">
+          <option>보컬 입문</option>
+          <option>취미 보컬</option>
+          <option>입시·전공 보컬</option>
+          <option>오디션·프로 준비반</option>
+          <option>음성재활 프로그램</option>
+          <option>기타 스튜디오</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="branch">희망 지점</label>
+        <select id="branch" name="희망 지점">
+          <option>부산 양정</option>
+          <option>서울 충무로</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <label for="message">문의 내용</label>
+        <textarea id="message" name="message" placeholder="궁금하신 점을 남겨주세요"></textarea>
+      </div>
+      <button type="submit" class="btn">문의 보내기</button>
+      <p class="form-status" id="formStatus"></p>
+    </form>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a href="index.html" class="logo">빠둠<span>뮤직</span></a>
+      <p style="margin-top: 1rem; max-width: 32ch;">목소리를 완성하는 보컬 트레이닝 스튜디오, 빠둠뮤직입니다.</p>
+    </div>
+    <div>
+      <h4>바로가기</h4>
+      <ul class="footer-links">
+        <li><a href="courses.html">커리큘럼</a></li>
+        <li><a href="instructors.html">강사진</a></li>
+        <li><a href="pricing.html">수강료</a></li>
+        <li><a href="reviews.html">후기</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>지점</h4>
+      <ul class="footer-links">
+        <li>부산 양정 — 양정역 2번출구 도보 1분</li>
+        <li>서울 충무로 — 목·금 운영</li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contact.html">오시는 길 · 문의</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 빠둠뮤직. All rights reserved.</span>
+    <span>주소·연락처 준비 중</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>
