@@ -13,10 +13,10 @@
 }
 
 :root {
-  /* color tokens — 종이 + 잉크 남색 + 형광펜 옐로우 */
-  --ivory: #f5efe0;
-  --ivory-raised: #e9dfc6;
-  --cream: #fffdf6;
+  /* color tokens — 더스티 블루 페이퍼 + 잉크 남색 + 형광펜 옐로우 */
+  --ivory: #eceef6;
+  --ivory-raised: #dbe0ef;
+  --cream: #fbfbfe;
   --brown-ink: #262b3d;
   --brown-dim: #5c6478;
   --terracotta: #35469b;

@@ -35,8 +35,8 @@ function page(title, message, tone) {
 <meta name="robots" content="noindex, nofollow"><title>${title}</title>
 <style>
   body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
-    background:#f5efe0;color:#262b3d;font-family:-apple-system,"Pretendard",sans-serif;padding:24px;text-align:center;}
-  .card{max-width:360px;padding:36px 28px;border:1px dashed rgba(38,43,61,0.28);border-radius:6px;background:#fffdf6;}
+    background:#eceef6;color:#262b3d;font-family:-apple-system,"Pretendard",sans-serif;padding:24px;text-align:center;}
+  .card{max-width:360px;padding:36px 28px;border:1px dashed rgba(38,43,61,0.28);border-radius:6px;background:#fbfbfe;}
   .status{font-size:1.4rem;font-weight:700;color:${color};margin:10px 0 4px;}
   .meta{font-size:0.85rem;color:#5c6478;}
 </style></head><body><div class="card">
