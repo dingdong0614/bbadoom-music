@@ -28,18 +28,19 @@ function tokenEnvName(roomId) {
 }
 
 function page(title, message, tone) {
-  const color = tone === "in-use" ? "#8f5c15" : tone === "empty" ? "#4f5c3a" : "#8a7565";
+  const color = tone === "in-use" ? "#26346f" : tone === "empty" ? "#8a6a12" : "#5c6478";
   return `<!doctype html>
 <html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
 <meta name="robots" content="noindex, nofollow"><title>${title}</title>
 <style>
   body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
-    background:#faf3e8;color:#3f2e22;font-family:-apple-system,"Pretendard",sans-serif;padding:24px;text-align:center;}
-  .card{max-width:360px;padding:36px 28px;border:1px solid rgba(63,46,34,0.15);border-radius:18px;background:#fffbf3;}
+    background:#f5efe0;color:#262b3d;font-family:-apple-system,"Pretendard",sans-serif;padding:24px;text-align:center;}
+  .card{max-width:360px;padding:36px 28px;border:1px dashed rgba(38,43,61,0.28);border-radius:6px;background:#fffdf6;}
   .status{font-size:1.4rem;font-weight:700;color:${color};margin:10px 0 4px;}
-  .meta{font-size:0.85rem;color:#8a7565;}
+  .meta{font-size:0.85rem;color:#5c6478;}
 </style></head><body><div class="card">
-  <p style="font-size:0.85rem;color:#8a7565;margin:0;">빠둠뮤직 · 강의실 현황</p>
+  <p style="font-size:0.85rem;color:#5c6478;margin:0;">빠둠뮤직 · 강의실 현황</p>
   <p class="status">${message}</p>
   <p class="meta">이 창은 닫으셔도 됩니다.</p>
 </div></body></html>`;
