@@ -55,13 +55,13 @@
   --container: 1160px;
 }
 
+/* scroll-behavior:smooth를 CSS에 두지 않는다 — Lenis가 자체적으로 스크롤을
+   보간하는데 네이티브 smooth scroll이 동시에 개입하면 서로 싸워서 스크롤이
+   덜컹거린다(Lenis 공식 권장사항). Lenis가 꺼지는 경우(터치 기기 등)에도
+   이 사이트엔 페이지 내 앵커 링크가 없어 smooth-scroll이 딱히 필요 없다. */
 * { box-sizing: border-box; }
 html {
   overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
 }
 body {
   margin: 0;
