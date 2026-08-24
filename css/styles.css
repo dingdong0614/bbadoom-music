@@ -1,6 +1,7 @@
 /* ==========================================================================
    빠둠뮤직 — 다정한 발성 훈련소
-   따뜻한 아이보리 + 테라코타/코랄 + 머스터드, 손글씨 느낌 세리프 + 정갈한 산세리프
+   따뜻한 아이보리 + 머스터드 골드 + 세이지, 손글씨 느낌 세리프 + 정갈한 산세리프
+   (자매 사이트 키훈과 팔레트가 겹쳐 코랄/레드 계열에서 골드+세이지로 전면 교체)
    ========================================================================== */
 
 @font-face {
@@ -17,9 +18,9 @@
   --cream: #fffbf3;
   --brown-ink: #3f2e22;
   --brown-dim: #8a7565;
-  --terracotta: #d9704a;
-  --terracotta-deep: #b8543a;
-  --mustard: #d9a441;
+  --terracotta: #b8791f;
+  --terracotta-deep: #8f5c15;
+  --mustard: #7c8f5e;
   --deep: #4a2f22;
   --deep-raised: #5c3c2b;
   --line: rgba(63, 46, 34, 0.13);
@@ -161,7 +162,7 @@ section { padding: var(--space-6) 0; position: relative; }
   background: var(--terracotta-deep);
   border-color: var(--terracotta-deep);
   transform: translateY(-1px);
-  box-shadow: 0 8px 20px -10px rgba(184, 84, 58, 0.55);
+  box-shadow: 0 8px 20px -10px rgba(143, 92, 21, 0.55);
 }
 .btn:focus-visible {
   outline: 2px solid var(--terracotta-deep);
@@ -558,8 +559,8 @@ section { padding: var(--space-6) 0; position: relative; }
   background: var(--ivory);
   width: fit-content;
 }
-.room-chip[data-status="in-use"] .room-status { background: rgba(217, 112, 74, 0.14); color: var(--terracotta-deep); }
-.room-chip[data-status="empty"] .room-status { background: rgba(217, 164, 65, 0.16); color: #93691f; }
+.room-chip[data-status="in-use"] .room-status { background: rgba(184, 121, 31, 0.16); color: var(--terracotta-deep); }
+.room-chip[data-status="empty"] .room-status { background: rgba(124, 143, 94, 0.18); color: #4f5c3a; }
 
 /* ---- footer ---- */
 .site-footer { padding: var(--space-5) 0 var(--space-4); border-top: 1px solid var(--line); }
@@ -667,7 +668,7 @@ section { padding: var(--space-6) 0; position: relative; }
 .form-consent a { color: var(--terracotta-deep); }
 .form-status { font-size: 0.88rem; padding: 0.8em 1.1em; border-radius: var(--radius-sm); border: 1px solid var(--line-strong); display: none; }
 .form-status.is-visible { display: block; }
-.form-status.is-success { border-color: var(--terracotta); color: var(--terracotta-deep); background: rgba(217, 112, 74, 0.08); }
+.form-status.is-success { border-color: var(--terracotta); color: var(--terracotta-deep); background: rgba(184, 121, 31, 0.08); }
 .form-status.is-error { border-color: #c0504b; color: #a3392f; background: rgba(192, 80, 75, 0.08); }
 
 /* ---- kakao cta ---- */

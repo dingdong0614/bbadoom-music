@@ -28,7 +28,7 @@ function tokenEnvName(roomId) {
 }
 
 function page(title, message, tone) {
-  const color = tone === "in-use" ? "#d9704a" : tone === "empty" ? "#93691f" : "#8a7565";
+  const color = tone === "in-use" ? "#8f5c15" : tone === "empty" ? "#4f5c3a" : "#8a7565";
   return `<!doctype html>
 <html lang="ko"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow"><title>${title}</title>
