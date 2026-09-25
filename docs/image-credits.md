@@ -5,9 +5,9 @@
 
 | 위치 | Unsplash ID | 작가 |
 |---|---|---|
-| 홈 히어로 | photo-1653443115239-6c10733503e9 | Mike Jumapao |
+| 홈 히어로 | photo-1560297035-0ed84c4175f6 | Forja2 Mx |
 | 홈 사진 모음 1 | photo-1760780567530-389d8a3fba75 | Soundsitive Studio |
-| 홈 사진 모음 2 | photo-1560297035-0ed84c4175f6 | Forja2 Mx |
+| 홈 사진 모음 2 | photo-1565145368739-29e5a81be478 | Nicolas Lobos |
 | 홈 사진 모음 3 / 프로그램 머리 | photo-1770096732027-3c8adfcafd55 | AMONWAT DUMKRUT |
 | 프로그램 01 보컬 입문 | photo-1590602847861-f357a9332bbc | Jukka Aalho |
 | 오시는 길 머리 | photo-1625899139925-57f71ba783b4 | Wade Lee |
