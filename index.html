@@ -49,14 +49,10 @@
         <div class="hero-stat"><span class="num">7,519</span><span class="label">인스타그램 팔로워</span></div>
       </div>
     </div>
-    <div class="hero-visual" data-reveal>
-      <svg viewBox="0 0 220 190" fill="none">
-        <rect x="94" y="24" width="32" height="58" rx="16" stroke="currentColor" stroke-width="3" style="color:var(--brown-ink)"/>
-        <path d="M64 78a46 46 0 0 0 92 0M110 124v26M84 150h52" stroke="currentColor" stroke-width="3" stroke-linecap="round" style="color:var(--brown-ink)"/>
-        <path class="wave-line" d="M14 176 Q 40 150 60 176 T 106 176 T 152 176 T 200 176"/>
-        <path class="wave-line wave-line--soft" d="M14 160 Q 44 190 70 160 T 126 160 T 182 160"/>
-      </svg>
-    </div>
+    <figure class="hero-visual hero-visual--photo" data-reveal>
+      <img src="https://images.unsplash.com/photo-1653443115239-6c10733503e9?auto=format&fit=crop&w=1100&q=80&h=935" srcset="https://images.unsplash.com/photo-1653443115239-6c10733503e9?auto=format&fit=crop&w=640&q=80&h=544 640w, https://images.unsplash.com/photo-1653443115239-6c10733503e9?auto=format&fit=crop&w=1100&q=80&h=935 1100w" sizes="(max-width: 980px) 92vw, 540px" width="1100" height="935" alt="마이크 가까이에서 노래하는 모습" loading="eager" fetchpriority="high" decoding="async">
+      <svg class="hero-photo-wave" viewBox="0 0 220 30" fill="none" aria-hidden="true"><path class="wave-line" d="M6 18 Q 32 2 52 18 T 98 18 T 144 18 T 214 18"/></svg>
+    </figure>
   </div>
 </header>
 
@@ -104,6 +100,16 @@
       <a href="courses.html" class="btn btn--ghost">전체 프로그램</a>
     </div>
     <div class="course-grid" data-render="programs" data-source="data/programs.json" data-limit="3"></div>
+  </div>
+</section>
+
+<section class="photo-mosaic-section" aria-label="레슨 분위기 사진">
+  <div class="container">
+    <div class="photo-mosaic" data-reveal>
+      <figure class="photo-mosaic-item"><img src="https://images.unsplash.com/photo-1760780567530-389d8a3fba75?auto=format&fit=crop&w=1200&q=80&h=800" width="1200" height="800" alt="방음 처리된 녹음 스튜디오" loading="lazy" decoding="async"></figure>
+      <figure class="photo-mosaic-item"><img src="https://images.unsplash.com/photo-1560297035-0ed84c4175f6?auto=format&fit=crop&w=800&q=80&h=800" width="800" height="800" alt="핑크 조명 아래 마이크를 든 사람" loading="lazy" decoding="async"></figure>
+      <figure class="photo-mosaic-item"><img src="https://images.unsplash.com/photo-1770096732027-3c8adfcafd55?auto=format&fit=crop&w=800&q=80&h=800" width="800" height="800" alt="방 안에서 노래와 악기를 연습하는 사람들" loading="lazy" decoding="async"></figure>
+    </div>
   </div>
 </section>
 
@@ -196,7 +202,7 @@
     </div>
   </div>
   <div class="container footer-bottom">
-    <span>© 2026 빠둠뮤직. All rights reserved.</span>
+    <span>© 2026 빠둠뮤직. All rights reserved. · 사진: Unsplash</span>
     <span><a href="privacy.html">개인정보처리방침</a></span>
   </div>
 </footer>

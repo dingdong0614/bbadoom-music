@@ -24,11 +24,21 @@
     return div.innerHTML;
   }
 
+  function photoUrl(id, w, h) {
+    return "https://images.unsplash.com/" + encodeURIComponent(id) + "?auto=format&fit=crop&w=" + w + "&h=" + h + "&q=80";
+  }
+
+  function programPhoto(p, cls, w, h) {
+    if (!p.img) return "";
+    return `<figure class="${cls}"><img src="${photoUrl(p.img, w, h)}" width="${w}" height="${h}" alt="${escapeHtml(p.imgAlt || "")}" loading="lazy" decoding="async"></figure>`;
+  }
+
   function renderPrograms(container, items) {
     container.innerHTML = items
       .map((p) => {
         const d = WAVE_PATHS[p.wave] || WAVE_PATHS.default;
         return `<article class="course-card" data-reveal data-tilt>
+          ${programPhoto(p, "course-photo", 720, 450)}
           <div class="course-card-head">
             <span class="idx">${escapeHtml(p.idx)}</span>
             <svg class="course-wave" width="34" height="20" viewBox="0 0 34 20" fill="none"><path d="${d}" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
@@ -45,7 +55,8 @@
     container.innerHTML = items
       .map((p) => {
         const d = WAVE_PATHS[p.wave] || WAVE_PATHS.default;
-        return `<article class="detail-row" data-reveal>
+        return `<article class="detail-row${p.img ? " detail-row--photo" : ""}" data-reveal>
+          ${programPhoto(p, "detail-photo", 480, 360)}
           <svg class="wave-icon" width="34" height="34" viewBox="0 0 34 20" fill="none"><path d="${d}" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
           <div>
             <h3>${escapeHtml(p.title)}</h3>
