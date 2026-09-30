@@ -12,7 +12,7 @@
  */
 
 const crypto = require("crypto");
-const { kvGet, kvSet } = require("./_kv");
+const { kvConfigured, kvGet, kvSet } = require("./_kv");
 const { KV_KEY, ROOMS, withDefaults } = require("./_rooms-config");
 
 const COOLDOWN_MS = 3000;
@@ -86,6 +86,9 @@ module.exports = async function handler(req, res) {
     res.setHeader("Content-Type", "text/html; charset=utf-8");
     res.status(200).send(page(`${room.name} · 빠둠뮤직`, `${room.name}, ${label}`, nextStatus));
   } catch (err) {
-    res.status(500).send("상태 저장에 실패했습니다: " + String(err.message || err));
+    console.error("[room-toggle] failed:", err && err.message);
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    const msg = kvConfigured() ? "상태 저장에 실패했어요. 잠시 후 다시 태깅해주세요." : "강의실 현황 기능이 아직 준비 중이에요.";
+    res.status(kvConfigured() ? 500 : 503).send(page("빠둠뮤직 · 강의실 현황", msg, "error"));
   }
 };

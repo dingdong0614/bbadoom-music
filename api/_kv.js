@@ -4,6 +4,10 @@
  * 파일명이 밑줄로 시작해 Vercel이 별도 라우트로 노출하지 않는다 (내부 전용 모듈).
  */
 
+function kvConfigured() {
+  return Boolean(process.env.KV_REST_API_URL && process.env.KV_REST_API_TOKEN);
+}
+
 function kvBase() {
   const url = process.env.KV_REST_API_URL;
   const token = process.env.KV_REST_API_TOKEN;
@@ -33,4 +37,4 @@ async function kvSet(key, value) {
   if (!res.ok) throw new Error(`KV SET 실패: ${res.status}`);
 }
 
-module.exports = { kvGet, kvSet };
+module.exports = { kvConfigured, kvGet, kvSet };

@@ -7,6 +7,7 @@
   "use strict";
 
   const POLL_MS = 45000;
+  let pollTimer = null;
   const STATUS_LABEL = { "in-use": "레슨 중", empty: "비어있어요" };
 
   function fmtTime(iso) {
@@ -51,7 +52,15 @@
         if (!res.ok) throw new Error("rooms fetch failed");
         return res.json();
       })
-      .then((data) => render(widget, data))
+      .then((data) => {
+        // 서버에 저장소가 아직 연동되지 않았으면 폴링을 멈추고 위젯은 숨긴 채로 둔다.
+        if (data && data.configured === false) {
+          if (pollTimer) clearInterval(pollTimer);
+          pollTimer = null;
+          return;
+        }
+        render(widget, data);
+      })
       .catch(() => {
         // 조회 실패 시 위젯을 숨긴 채로 두고 조용히 무시한다.
       })
@@ -62,8 +71,8 @@
 
   document.addEventListener("DOMContentLoaded", () => {
     if (!document.getElementById("roomsWidget")) return;
+    pollTimer = setInterval(loadState, POLL_MS);
     loadState();
-    setInterval(loadState, POLL_MS);
 
     const refreshBtn = document.getElementById("roomsRefresh");
     if (refreshBtn) refreshBtn.addEventListener("click", () => loadState({ manual: true }));
