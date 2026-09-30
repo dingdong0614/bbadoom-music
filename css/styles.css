@@ -353,6 +353,15 @@ section { padding: var(--space-6) 0; position: relative; }
   background: radial-gradient(circle at 35% 30%, #f4cf6e, var(--mustard) 70%);
   box-shadow: 0 3px 4px rgba(38, 43, 61, 0.35);
 }
+/* 히어로 사진은 GSAP 스크롤 리빌 대신 같은 모양(0.8s, 18px 위로)의 CSS 페이드로 등장.
+   외부 스크립트를 기다리지 않아 첫 화면 사진(LCP)이 늦게 그려지지 않는다. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-visual--fade { animation: hero-fade-in 0.8s cubic-bezier(0.215, 0.61, 0.355, 1) both; }
+}
+@keyframes hero-fade-in {
+  from { opacity: 0; translate: 0 18px; }
+  to { opacity: 1; translate: 0 0; }
+}
 .hero-visual svg { width: 100%; height: auto; overflow: visible; }
 .hero-visual .wave-line {
   fill: none;
