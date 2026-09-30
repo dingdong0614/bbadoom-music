@@ -76,9 +76,7 @@
     container.innerHTML = items
       .map(
         (p) => `<article class="person-card" data-reveal data-tilt>
-        <div class="person-frame">
-          <svg viewBox="0 0 60 40" fill="none"><path d="M4 22 Q 14 10 22 22 T 40 22 T 56 22" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        </div>
+        ${p.photo ? `<div class="person-frame"><img src="${escapeHtml(p.photo)}" width="600" height="800" alt="${escapeHtml(p.photoAlt || p.name + " 사진")}" loading="lazy" decoding="async"></div>` : ""}
         <h3>${escapeHtml(p.name)}</h3>
         <span class="person-role">${escapeHtml(p.role)} · ${escapeHtml(p.credential)}</span>
         <p class="person-note">${escapeHtml(p.note)}</p>
@@ -134,7 +132,10 @@
           return res.json();
         })
         .then((items) => {
-          const list = limit ? items.slice(0, limit) : items;
+          // "confirmed": false 항목(상담 후 확정 예정인 자리표시)은 표시만 끈다. 데이터는 그대로 두고
+          // 실제 정보를 넣으면서 confirmed를 true로 바꾸면 다시 보인다.
+          const shown = items.filter((i) => i.confirmed !== false);
+          const list = limit ? shown.slice(0, limit) : shown;
           renderer(container, list);
           container.dispatchEvent(new CustomEvent("content-rendered", { bubbles: true }));
         })
